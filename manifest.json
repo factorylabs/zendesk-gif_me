@@ -1,0 +1,12 @@
+{
+  "name": "gif_me",
+  "author": {
+    "name": "Taylor Beseda",
+    "email": "taylor.beseda@factorylabs.com"
+  },
+  "defaultLocale": "en",
+  "private": true,
+  "location": "top_bar",
+  "version": "0.1",
+  "frameworkVersion": "1.0"
+}
