@@ -7,8 +7,8 @@
 
   return {
     events: {
-      'app.activated': 'init', // This event fires when App is activated.
-      'pane.activated': 'activate_pane', // This event fires when pane in topbar is activated.
+      'app.activated': 'init',
+      'pane.activated': 'activate_pane',
       'pane.deactivated': 'deactivate_pane',
       'click #gifme': 'gifme',
       'get_gifs.done': 'gifs_got'
@@ -16,30 +16,25 @@
 
     requests: {
       get_gifs: function(){
-        console.log('Search term is set to:', this.search_term);
         return {
-          url: API_URL+'/search/',
+          url: API_URL+'/search',
           type: 'GET',
           data: {
             api_key: API_KEY,
-            q = this.search_term
+            q: this.search_term
           }
-        }
+        };
       }
-    }
-
-    init: function(){
-
     },
+
+    init: function(){},
 
     activate_pane: function(){
       this.switchTo('search', {});
       this.popover({width: 600, height: 400});
     },
 
-    deactivate_pane: function(){
-
-    },
+    deactivate_pane: function(){},
 
     gifme: function(){
       this.search_term = this.$('#search-field').val();
@@ -47,7 +42,7 @@
     },
 
     gifs_got: function(response){
-      console.log('Got gifs?', response);
+      this.switchTo('gifs', {gifs: response.data});
     }
 
   };

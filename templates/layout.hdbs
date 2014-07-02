@@ -1,7 +1,4 @@
 <header>
-  <h3>{{setting "name"}}</h3>
+  <h3>{{setting "name"}} <small>W.I.P.</small></h3>
 </header>
 <section data-main/>
-<footer>
-  Work in progress...
-</footer>
