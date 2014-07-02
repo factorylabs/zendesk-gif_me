@@ -1,3 +1,6 @@
+<input id="search-field" type="text" placeholder="Search terms" />
+<button id="gifme">Find .gifs!</button>
+<hr />
 {{#each gifs}}
   <img class="gif" src="{{this.images.fixed_width.url}}" />
 {{else}}

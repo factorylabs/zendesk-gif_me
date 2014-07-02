@@ -1,6 +1,11 @@
 #search-field {
-  
+
 }
+
 #gifme {
   height: 30px;
+}
+
+img.gif {
+  cursor: pointer;
 }

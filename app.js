@@ -42,6 +42,7 @@
     use_gif: function(e){
       var comment = this.comment();
       comment.text(comment.text() + '\n ![]('+this.$(e.currentTarget).attr('src')+')');
+      this.switchTo('search', {});
     }
 
   };

@@ -1,5 +1,5 @@
 {
-  "name": "gif_me",
+  "name": ".gif Me!",
   "author": {
     "name": "Taylor Beseda",
     "email": "taylor.beseda@factorylabs.com"
@@ -7,6 +7,6 @@
   "defaultLocale": "en",
   "private": true,
   "location": "ticket_sidebar",
-  "version": "0.1",
+  "version": "0.2",
   "frameworkVersion": "1.0"
 }
