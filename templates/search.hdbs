@@ -1,2 +1,2 @@
 <input id="search-field" type="text" placeholder="Search terms" />
-<button id="gifme">Go!</button>
+<button id="gifme">Find .gifs!</button>

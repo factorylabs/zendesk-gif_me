@@ -1,4 +1,4 @@
 <header>
-  <h2>{{setting "name"}} <small>W.I.P.</small></h2>
+  <h3>{{setting "name"}}</h3>
 </header>
 <section data-main/>

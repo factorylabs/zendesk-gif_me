@@ -31,7 +31,7 @@
 
     activate_pane: function(){
       this.switchTo('search', {});
-      this.popover({width: 600, height: 400});
+      this.popover({width: 430, height: 400});
     },
 
     deactivate_pane: function(){},
