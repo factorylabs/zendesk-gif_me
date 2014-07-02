@@ -1,7 +1,5 @@
-<h4>Results</h4>
-
 {{#each gifs}}
   <img src="{{this.images.fixed_width.url}}" />
 {{else}}
-  <p>No results :()</p>
+  <p>No results :(</p>
 {{/each}}
