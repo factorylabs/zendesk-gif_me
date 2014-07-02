@@ -7,6 +7,6 @@
   "defaultLocale": "en",
   "private": true,
   "location": "ticket_sidebar",
-  "version": "0.2",
+  "version": "0.3",
   "frameworkVersion": "1.0"
 }

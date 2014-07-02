@@ -33,7 +33,7 @@
 
     search_keyup: function(e){
       if (e.which == 13) {
-        this.$('#gifme').click()
+        this.$('#gifme').click();
       }
     },
 
@@ -50,7 +50,7 @@
       var comment = this.comment();
       var text = comment.text();
       text = text.length > 0 ? text+'\n\n' : '';
-      comment.text(text+'![]('+this.$(e.currentTarget).attr('src')+')');
+      comment.text(text+'![]('+this.$(e.currentTarget).data('original')+')');
       this.switchTo('search', {});
     }
 
