@@ -3,7 +3,5 @@
 </header>
 <section data-main/>
 <footer>
-  <a href="mailto:{{author.email}}">
-    {{author.name}}
-  </a>
+  Work in progress...
 </footer>

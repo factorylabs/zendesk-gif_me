@@ -1,29 +1,32 @@
-(function() {
+(function(){
 
   'use strict';
-
-  var EVENT_NAME = 'send_message';
 
   return {
     events: {
       'app.activated': 'init', // This event fires when App is activated.
       'pane.activated': 'paneOnActivated', // This event fires when pane in topbar is activated.
-      'pane.deactivated': 'paneOnDeactivated'
+      'pane.deactivated': 'paneOnDeactivated',
+      'click #gifme': 'gifme'
     },
 
-    init: function() {
+    init: function(){
 
     },
 
-    paneOnActivated: function() {
+    paneOnActivated: function(){
+      this.switchTo('search', {});
       this.popover({width: 600, height: 400});
     },
 
-    paneOnDeactivated: function() {
+    paneOnDeactivated: function(){
 
-      }
     },
 
+    gifme: function(){
+      var search_term = this.$('#search-field').val();
+      console.log(search_term);
+    }
 
   };
 

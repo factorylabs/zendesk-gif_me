@@ -1,0 +1,2 @@
+<input id="search-field" type="text" placeholder="Search" />
+<button id="gifme">GifMe!</button>
