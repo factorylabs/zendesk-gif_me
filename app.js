@@ -8,10 +8,9 @@
   return {
     events: {
       'app.activated': 'init',
-      'pane.activated': 'activate_pane',
-      'pane.deactivated': 'deactivate_pane',
       'click #gifme': 'gifme',
-      'get_gifs.done': 'gifs_got'
+      'get_gifs.done': 'gifs_got',
+      'click img.gif': 'use_gif'
     },
 
     requests: {
@@ -27,14 +26,9 @@
       }
     },
 
-    init: function(){},
-
-    activate_pane: function(){
+    init: function(){
       this.switchTo('search', {});
-      this.popover({width: 430, height: 400});
     },
-
-    deactivate_pane: function(){},
 
     gifme: function(){
       this.search_term = this.$('#search-field').val();
@@ -43,6 +37,11 @@
 
     gifs_got: function(response){
       this.switchTo('gifs', {gifs: response.data});
+    },
+
+    use_gif: function(e){
+      var comment = this.comment();
+      comment.text(comment.text() + '\n ![]('+this.$(e.currentTarget).attr('src')+')');
     }
 
   };

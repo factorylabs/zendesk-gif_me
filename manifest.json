@@ -6,7 +6,7 @@
   },
   "defaultLocale": "en",
   "private": true,
-  "location": "top_bar",
+  "location": "ticket_sidebar",
   "version": "0.1",
   "frameworkVersion": "1.0"
 }

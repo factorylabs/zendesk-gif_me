@@ -1,5 +1,5 @@
 {{#each gifs}}
-  <img src="{{this.images.fixed_width.url}}" />
+  <img class="gif" src="{{this.images.fixed_width.url}}" />
 {{else}}
   <p>No results :(</p>
 {{/each}}
