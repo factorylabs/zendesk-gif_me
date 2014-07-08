@@ -1,9 +1,14 @@
 #search-field {
-
+  width: 232px;
 }
 
 #gifme {
   height: 30px;
+}
+
+.message {
+  margin: 5px 0 5px;
+  color: #888;
 }
 
 img.gif {

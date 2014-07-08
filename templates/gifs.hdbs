@@ -1,6 +1,9 @@
-<input id="search-field" type="text" placeholder="Search terms" />
-<button id="gifme">Find .gifs!</button>
+<div>
+  <input id="search-field" type="text" placeholder="Search terms" />
+  <button id="gifme">Find .gifs!</button>
+</div>
 <hr />
+<h4 class="message">{{message}}</h4>
 {{#each gifs}}
   <img class="gif" data-original="{{this.images.original.url}}" src="{{this.images.fixed_width.url}}" />
 {{else}}
