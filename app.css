@@ -7,5 +7,10 @@
 }
 
 img.gif {
+  width: 320px;
   cursor: pointer;
+}
+
+footer {
+  margin-top: 5px;
 }

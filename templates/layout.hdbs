@@ -2,3 +2,13 @@
   <h3>{{setting "name"}}</h3>
 </header>
 <section data-main/>
+<footer>
+  Powered by
+  <a href="http://giphy.com" target="_blank">
+    <img width="45" src="{{assetURL "giphy_logo_txt.png"}}">
+  </a>
+  and built by
+  <a href="http://factorylabs.com" target="_blank">
+    Factory
+  </a>.
+</footer>
