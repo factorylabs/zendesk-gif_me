@@ -39,7 +39,7 @@
 
     init: function(){
       this.switchTo('search', {});
-      this.next_message = 'Trending .gifs'
+      this.next_message = 'Trending .gifs';
       this.ajax('trending_gifs');
     },
 
@@ -51,7 +51,7 @@
 
     gifme: function(){
       this.search_term = this.$('#search-field').val();
-      this.next_message = 'Results for "'+this.search_term+'"'
+      this.next_message = 'Results for "'+this.search_term+'"';
       this.ajax('search_gifs');
     },
 
