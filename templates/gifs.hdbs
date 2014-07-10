@@ -1,6 +1,9 @@
 <div>
-  <input id="search-field" type="text" placeholder="Search terms" />
-  <button id="gifme">Find .gifs!</button>
+  <input id="search-field" type="text" placeholder="search terms" />
+  <button id="gifme">find .gifs!</button>
+  {{#unless trending}}
+    <p id="trending-link"><a href="#">trending</a></p>
+  {{/unless}}
 </div>
 <hr />
 <h4 class="message">{{message}}</h4>

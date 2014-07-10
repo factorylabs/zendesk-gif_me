@@ -10,6 +10,7 @@
       'app.activated': 'init',
       'keyup #search-field': 'search_keyup',
       'click #gifme': 'gifme',
+      'click #trending-link': 'init',
       'search_gifs.done': 'gifs_got',
       'trending_gifs.done': 'gifs_got',
       'click img.gif': 'use_gif'
@@ -40,7 +41,9 @@
     init: function(){
       this.switchTo('search', {});
       this.next_message = 'Trending .gifs';
+      this.trending = true;
       this.ajax('trending_gifs');
+      return false;
     },
 
     search_keyup: function(e){
@@ -56,7 +59,12 @@
     },
 
     gifs_got: function(response){
-      this.switchTo('gifs', {gifs: response.data, message: this.next_message});
+      this.switchTo('gifs', {
+        gifs: response.data,
+        message: this.next_message,
+        trending: this.trending
+      });
+      this.trending = false;
     },
 
     use_gif: function(e){

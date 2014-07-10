@@ -1,9 +1,17 @@
 #search-field {
-  width: 232px;
+  width: 235px;
 }
 
 #gifme {
   height: 30px;
+}
+
+#trending-link {
+  margin-top: 5px;
+  text-align: right;
+  a {
+    font-family: Courier, monospace;
+  }
 }
 
 .message {
