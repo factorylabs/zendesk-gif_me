@@ -39,10 +39,15 @@
     },
 
     init: function(){
-      this.switchTo('search', {});
-      this.next_message = 'Trending .gifs';
-      this.trending = true;
-      this.ajax('trending_gifs');
+      var ticket_status = this.ticket().status();
+      if (ticket_status == 'closed') {
+        this.switchTo('closed-ticket');
+      } else {
+        this.switchTo('search');
+        this.next_message = 'Trending .gifs';
+        this.trending = true;
+        this.ajax('trending_gifs');
+      }
       return false;
     },
 
