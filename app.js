@@ -44,11 +44,19 @@
         this.switchTo('error', {message: 'Can\'t add .gifs to closed tickets!'});
       } else {
         this.switchTo('search');
+        this.loading();
         this.next_message = 'Trending .gifs';
         this.trending = true;
         this.ajax('trending_gifs');
       }
       return false;
+    },
+
+    loading: function(){
+      this.$('#loader').show();
+      this.$('#trending-link').hide();
+      this.$('#search-field').attr('disabled', 'disabled');
+      this.$('#gifme').attr('disabled', 'disabled');
     },
 
     search_keyup: function(e){
@@ -58,6 +66,7 @@
     },
 
     gifme: function(){
+      this.loading();
       this.search_term = this.$('#search-field').val();
       this.next_message = 'Results for "'+this.search_term+'"';
       this.ajax('search_gifs');

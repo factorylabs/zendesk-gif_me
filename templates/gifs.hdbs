@@ -1,3 +1,4 @@
+<img id="loader" src="{{assetURL "loading.gif"}}" />
 <div>
   <input id="search-field" type="text" placeholder="search terms" />
   <button id="gifme">find .gifs!</button>
@@ -10,5 +11,5 @@
 {{#each gifs}}
   <img class="gif" data-original="{{this.images.original.url}}" src="{{this.images.fixed_width.url}}" />
 {{else}}
-  <p>No results :(</p>
+  <p>No .gifs :(</p>
 {{/each}}

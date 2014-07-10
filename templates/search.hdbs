@@ -1,3 +1,4 @@
+<img id="loader" src="{{assetURL "loading.gif"}}" />
 <input id="search-field" type="text" placeholder="search terms" />
 <button id="gifme">find .gifs!</button>
 <p id="trending-link"><a href="#">trending</a></p>
