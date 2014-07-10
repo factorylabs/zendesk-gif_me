@@ -41,7 +41,7 @@
     init: function(){
       var ticket_status = this.ticket().status();
       if (ticket_status == 'closed') {
-        this.switchTo('closed-ticket');
+        this.switchTo('error', {message: 'Can\'t add .gifs to closed tickets!'});
       } else {
         this.switchTo('search');
         this.next_message = 'Trending .gifs';
@@ -77,7 +77,7 @@
       var text = comment.text();
       text = text.length > 0 ? text+'\n\n' : '';
       comment.text(text+'![]('+this.$(e.currentTarget).data('original')+')');
-      this.switchTo('search', {});
+      this.switchTo('search');
     }
 
   };
